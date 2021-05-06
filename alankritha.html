@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alankritha Art Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <style>
+        body{
+            overflow-x:hidden;
+            background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHwAqwMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAACAwQBBQAG/8QAKxAAAgICAgEDAwQCAwAAAAAAAQIAEQMhEjFBBCJRE2FxMoGRoSOxFBXB/8QAGwEBAAMBAQEBAAAAAAAAAAAAAwECBAAGBQf/xAAdEQADAQADAQEBAAAAAAAAAAAAAQIRAxIhMUET/9oADAMBAAIRAxEAPwD6LHkKtxfkfgytf8i+0gxbJY0JmHEyPzBofAnaertprSxeWUBCKCjRiebYyGG91Hel5ZX2wAvzM9RhGPKCBYU2ZdGX48ZXjt+Lao+IXqQBjNDVQMObG4AXsSgoMmMhopjvxnMx+AdR/wBKxYMoX02O9iVY/T4+BBNfERUByUjlj0zNY51FMj4j7Rf4nXOAqeq18wDhB1UWbMl+nL5C6I3NVx8V+J0W9LY6mf8ADUAe2KuSTLUpiFWmCt53D+mLoCPOFm/IEYuIEAG9Hc52E4RFkwgnq7HfxA+mQaUmdF6vYF/mIVLyaFyZvwC+NCX9M5TkbiOGQaBP7mdfIn+LrchXEzZABV35nRyeAckZ8N9Nicr7jdR5wiqr+pThQBaI3D4A3Zowq5PSVxnMwnhkKdj/AFLR1E5sdOGC9jsxyupUXcmnvp0eeM4zYxQmhf4hkb1H4cVz52HuXWeshUHGx42R3fxNH1sgDhtH5l/qMFilU1AwY+IoyZXpH9E1pF6LGUyMW7vv5nVRfaPJMWFUdCNQ6qjcXDPy12CUCOAog9xaqdXHIKEkyWC1+YsgykLfcB1rqWTM9IUCb6jFW5qrGou5bQKQP0zVzPpEeZXjX5htj1KdvQ2jnNiB7G5mDF7ialb4/tMxij+Zfu8Ccg5FHUWmBA9+Y7IKiw25CbwOktGhRAZfd94xd/MFur8yCGiD1hJA3FAmh1/MpyJd2ZCUFm2W5onMwy0nuifSkFwDOkEA3OZ6dGVgV7+86ByDj5v7TEpPbcv3wYxUCJOzoCJbIbq4702yTL4H16rRiYQF3ZM3iAYzlQiywLakoJ6wh3qNBggQq8zgaDWLzGqMMHUT6hgKszkC0ar2Y9DIedNoyvEwIuWaBpFSGPGxJVaNVoTCYTARL0GuOJ1EZDcmQ6AyvYikI5AGY1kwkX47irxAP0emxqY+hPICIOQ6lf05gMAw8TnZMY5mWPkCDuc98w5HZ/iPCYFtDRj4jqeIIHUrAFTCilTZqZUz1vc5z/qvqM9PlCEg/wC57PjI2dfaSlx2Ny/0dLui/NnFUDuFgQheRNznq1ncqx+o4+0jXzODqGliLvENehEY8yuuvEYH+JDMdS0MMj9TRc3sjqUlqFyPM3Jya7kyHgzCgKC+6jca8SSD2OoKClhCToNIpx7hE15i1JAmgg7JqVAYYeCx1c8ovc8/UlA0KJnlYAwTBI3qXwGixTcTn/Sdw8OlAJ3Azix3Kr6V+ohzBmFAxA9Ma2dy1sd/iCUjzWBOBCeohfX86kCN94znUwyz2j4kNy5eWt2TFjFeqgB/dK/TupYdRNOeyvBIw78x30rXQ3KvaaqMdARqToFcjICfpDibP48zMedi36ozPjY7EiyI+PJq7kk9VSOg+VvncRy55BZqu/vErlbzvULDTtVb+ZINRh0qHzPQceNgKvUKQY6QzlqpkAwpwLQwH7zC1wSag9iSkBaMZgJqbiyDcNfau5cCkblYge394kZX5Gt3GFC27hcQg1OWBtMwGxuZAGb38Ydycw5enzSZSBZmfUyubU6ihRU3cu9JiAXdbnzX9PfW1K0A8gq/MYrMACDHNjDMLAFeY2sakXUutM7vz4P9Dk5gXLww4zkHIMbe3qOHqL8x5Ml8bb1FeVlAsyLMFyNyU9TM+X2V8z2ID+Zc5R1Wg/Tv5jsGEKeUKoWM+J2h36ivH0IVC4tSKmlxXcqY6QbAVBX58RTZJoexLpBUgmNwF2aueuIdwG6qXSM1IeAaJ+JnuJsiIOQ8RxbUPHkLrvsS2AtDg4ni4OorjMo3c7EG9N4e+4fNRqLOSjUmb1Kcj7hLKWw3SRxCKQX+8u9O68RuhU5LZSNE9y/0bgIAevgeJ8lN6e/5pfUtzqWAo6ruTu9AfaMbJy/8EmyESWweOX+jC5YbMIObBB/MnV9Tfqx4eIu4G5chZuR8SrBmAFnqc/6nzG46yKxZ649CJ2DvjWYdXHkTJoUYwLU42PK+JgxsH8+JT/2WwAAPvO0y3wv8Og+XjoC6i0eQH1QY3cJfUD5ipLAa4Wi8sIaNIhmsxyZPNyTNcFJb7RGbZmnJAZ5KMlSJZnxiytjzue/5QxuFr9XUJjdm/wC5G5DZFdv2jyk/pmuWjtYzYmuaER6ZwVEeQGsE1QuC/GEyL1JYbHmQnheyLlXrMhAs+evvIbY7E1ca8Ml/Tkn9fu2PNSjHkYAUTXiIYAGajGfExH6bU6XY8hPieZe5Pjcx/M8ZADnDFBFxTMQTG8iREPt68RJLT6zeRPnUYuTiwbqv7k5JBIheIhLkYchJJY2SYBc35mL3CMsivXAeR8Qw7/iCvcYNGJLBtIPHmbl2ddyvHlOgOvmR+R944GmAHUuYOWEdFX1EZnbXH5ghjG1a2ZaTBc4T/WYDfcEtktaEeUXWoxUXWoyoxciPelyuzFcgoDqVtl9o/qI4gEza1KtJsyV4S5Vd8hLEsYePB7B7T/MeAAbimyMCRqJr+IzuUf/Z);
+            background-size:cover;
+	    }
+            form{
+            background-image:url(https://i.pinimg.com/564x/39/2d/67/392d675638b96f888aebf283910b3b50.jpg);
+		    background-size:cover;
+            }
+        .col-4{
+            padding:1%;
+	    }
+     </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="ART_GALLERY.html"> ART GALLERY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kalakritiart.html">Kalakriti Art Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alankritha Art Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shristhi.html">Shristhi Art Gallery</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+			<div class="login-btn">
+<a href="#" class="button" data-toggle="modal" data-target="#login-modal"><button >login</button></a></div>
+</div>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    
+                   <form>  
+        <div class="container"> 
+		<center><h2 >Login</h2><center>
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required> 
+		<br>
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>
+		<br>
+            <button type="submit">Login</button>   
+		<br>
+            <input type="checkbox" checked="checked"> Remember me 
+		<br>
+            <button type="button" class="cancelbtn"> Cancel</button>   
+             <a href="#">Forgot password? </a>   
+        </div>   
+    </form>   
+                </div>
+            </div>
+          </div>
+			</ul>
+        </div>
+    </nav>
+   <center> <h3>ALANKRITHA ART GALLERY</h3><center>
+    <div class="row">
+        <div class="col-4"><img src="https://www.aalankritha.com/banner/simg5bbda58ee3dc9.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/banner/simg5bbda63688ed3.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/products/smlphotos/simg5acf7a1f5f2e2.jpg" width="450px" height="200px"></div>
+        </div>
+        <div class="row">
+        <div class="col-4"><img src="https://www.aalankritha.com/banner/simg5bbda60c8b444.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/banner/simg59ba751e57bd6.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/products/smlphotos/simg5a0abd3be088a.jpg" width="450px" height="200px"></div>
+        </div>
+      <div class="row">
+        <div class="col-4"><img src="https://www.aalankritha.com/products/smlphotos/simg5a0c268017c19.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/products/smlphotos/simg5b60144ee4bca.jpg" width="450px" height="200px"></div>
+        <div class="col-4"><img src="https://www.aalankritha.com/products/smlphotos/simg5b77db0104e82.jpg" width="450px" height="200px"></div>
+    </div>
+   
+</body>
+</html>
